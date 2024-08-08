@@ -42,37 +42,35 @@ export default function ChatBot() {
             setMessages(prev => [...prev, { content: 'Sorry, there was an error processing your request.', type: 'ai' }]);
         }
     };
-    async function getChatHistory() {
-        // const chatID = "526adcba-bd5a-44f8-a365-62a629afbb1a"
-        // const sessionId = "fd8e860e-d344-4238-b6f7-1d7c7b75c0f9";
-        const sessionId = '868c5336-d1b6-4a08-a18c-cdd19da84ad0';
-        const username = "Hemanth";
-        const password = "Deansam@120";
+    // async function getChatHistory() {
+    //     const sessionId = '';
+    //     const username = "";
+    //     const password = "";
       
-        try {
-          const authHeader = 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64');
+    //     try {
+    //       const authHeader = 'Basic ' + Buffer.from(`${username}:${password}`).toString('base64');
       
-          const response = await fetch(`https://flowise-production-ab53.up.railway.app/api/v1/chatmessage/${sessionId}`, {
-            method: 'GET',
-            headers: {
-              'Authorization': authHeader
-            }
-          });
+    //       const response = await fetch(`https://flowise-production-ab53.up.railway.app/api/v1/chatmessage/${sessionId}`, {
+    //         method: 'GET',
+    //         headers: {
+    //           'Authorization': authHeader
+    //         }
+    //       });
       
-          if (response.ok) {
-            const data = await response.json();
-            console.log(data)
-            return data.messages;
-          } else {
-            const errorData = await response.json();
-            throw new Error(`Error fetching chat history (${response.status}): ${errorData.error}`);
-          }
-        } catch (error) {
-          console.error(error);
-          throw error;
-        }
-      }
-      getChatHistory();
+    //       if (response.ok) {
+    //         const data = await response.json();
+    //         console.log(data)
+    //         return data.messages;
+    //       } else {
+    //         const errorData = await response.json();
+    //         throw new Error(`Error fetching chat history (${response.status}): ${errorData.error}`);
+    //       }
+    //     } catch (error) {
+    //       console.error(error);
+    //       throw error;
+    //     }
+    //   }
+    //   getChatHistory();
 
    
     const renderTextData = (msg: Message) => {

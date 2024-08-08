@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/layouts/navbar"; 
+import ChatBot from "./chat/page";
 
 
 
@@ -24,7 +25,7 @@ export default function RootLayout({
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <Navbar />
         <main className="w-full h-full">
-          {children}
+          <ChatBot></ChatBot>
         </main>
       </ThemeProvider>
     </body>

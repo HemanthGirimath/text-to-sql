@@ -20,7 +20,7 @@ const Sidebar = ()=>{
     <SheetHeader>
       <SheetTitle></SheetTitle>
       <SheetDescription>
-        
+          chat-history and chat-id goes here
       </SheetDescription>
     </SheetHeader>
   </SheetContent>
