@@ -13,6 +13,7 @@ interface SQLResultTableProps {
 }
 
 const SQLResultTable: React.FC<SQLResultTableProps> = ({ data }) => {
+  
   if (!data || data.length === 0) {
     return <p>No data available</p>;
   }
