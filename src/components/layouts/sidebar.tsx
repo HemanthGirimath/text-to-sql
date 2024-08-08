@@ -15,13 +15,12 @@ const Sidebar = ()=>{
     return(
         <div>
             <Sheet>
-  <SheetTrigger>History</SheetTrigger>
+  <SheetTrigger>Chat-History</SheetTrigger>
   <SheetContent side={"left"}>
     <SheetHeader>
-      <SheetTitle>Are you absolutely sure?</SheetTitle>
+      <SheetTitle></SheetTitle>
       <SheetDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
+        
       </SheetDescription>
     </SheetHeader>
   </SheetContent>
